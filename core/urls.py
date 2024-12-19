@@ -8,7 +8,7 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Nice APIs",
+        title="TapPlay APIs",
         default_version='v1',
         description="No documentation!",
         contact=openapi.Contact(email="Javohir.py@gmail.com"),

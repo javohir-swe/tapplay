@@ -81,22 +81,31 @@ brew services start postgresql
 
 ---
 ### If you don't want to use docker then the following commands are for you
-1. Create a Virtual Environment activate it:
+1. Run this:
+   ```bash
+   mkdir -p /home/dev/own/TapPlay/tapplay/static
+   chmod -R 755 /home/dev/own/TapPlay/tapplay/static
+   ```
+2. Create a Virtual Environment activate it:
    ```bash
    python3 -m venv venv
    ```
    ```bash
    source venv/bin/activate
    ```
-2. Migrate
+3. Installation **requirements.txt**
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Migrate
    ```bash
    python3 manage.py migrate
    ```
-3. Create Superuser account
+5. Create Superuser account
    ```bash
    python3 manage.py createsuperuser
    ```
-4. And then run the project
+6. And then run the project
    ```bash
    python3 manage.py runserver
    ```
