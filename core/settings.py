@@ -48,6 +48,9 @@ ADDITIONAL_APPS = [
 
 CUSTOM_APPS = [
     'accounts',
+    'comments',
+    'currency',
+    'audio',
 ]
 
 INSTALLED_APPS += ADDITIONAL_APPS + CUSTOM_APPS
@@ -145,6 +148,10 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# Media fayllarni saqlash yo'llari
+MEDIA_URL = '/media/'  # URL orqali fayllarni ishlatish
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Fayllar serverda saqlanadigan joy
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

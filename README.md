@@ -2,8 +2,8 @@
 
 ### Clone the repository:
 ```bash
-git clone https://github.com/javohir-swe/drf.git
-cd drf
+git clone https://github.com/javohir-swe/tapplay.git
+cd tapplay
 ```
 ### Database setup for those who don't use docker.
  - Installing PostgreSQL
