@@ -11,3 +11,10 @@ class Currency(models.Model):
     def __str__(self):
         return self.name
 
+class PurchasedCurrencies(models.Model):
+    owner = models.ForeignKey("accounts.User", on_delete=models.CASCADE)
+    currency_type = models.ForeignKey("Currency", on_delete=models.SET_NULL, null=True)
+    count = models.IntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.owner} | {self.count} | {self.currency_type}"
