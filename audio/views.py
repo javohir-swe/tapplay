@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
 
-# Create your views here.
+from core.paginations import  DefaultLimitOffSetPagination
+from .serializers import AudioListSerializer
+from rest_framework.permissions import IsAuthenticated, IsAuthenticated, AllowAny
+from .models import Audio
+
+
+
+class AudioModelViewSet(ModelViewSet):
+    queryset = Audio.objects.all()
+    serializer_class = AudioListSerializer
+    pagination_class = DefaultLimitOffSetPagination
+    permission_classes = [AllowAny]
