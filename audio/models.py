@@ -14,6 +14,8 @@ class Audio(models.Model):
     thumbnail = models.ImageField(upload_to="audio_media/thumbnails/")
     audio = models.FileField(upload_to="audio_media/audios/")
     total_time = models.CharField(max_length=20)
+
+    objects = models.Manager()
     # donate_ids = models.ManyToManyField()
     # comment_ids = models.ManyToManyField() # Alohida APIdan olinadi Audio IDsini bergan holatda
 

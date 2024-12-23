@@ -1,8 +1,8 @@
 from rest_framework.viewsets import ModelViewSet
 
-from core.paginations import  DefaultLimitOffSetPagination
+from utils.paginations import DefaultLimitOffSetPagination
 from .serializers import AudioListSerializer
-from rest_framework.permissions import IsAuthenticated, IsAuthenticated, AllowAny
+from rest_framework.permissions import AllowAny
 from .models import Audio
 
 
