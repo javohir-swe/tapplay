@@ -26,6 +26,7 @@ urlpatterns = [
     path('api/auth/', include('accounts.urls')),
     path('api/', include('audio.urls')),
     path('api/', include('currency.urls')),
+    path('api/', include('comments.urls')),
 
     # Include DRF-Swagger URLs
     path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
